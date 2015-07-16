@@ -133,14 +133,14 @@
 		
 		// see if the target element is overflow-y:scroll. If so, it is the 
 		// scroll container
-		if (this.$element.css('overflow-y') == 'scroll') {
+		if (this.$element.css('overflow-y') == 'auto') {
 			$scrollContainer = this.$element;
 		}
 
 		// see if a parent is overflow-y:scroll. If so, it is the scroll container
 		if (!$scrollContainer) {
-			$scrollContainer = this.$element.parents().filter(function() { 
-				return $(this).css('overflow-y') == 'scroll';
+			$scrollContainer = this.$element.parents().filter(function() {
+				return $(this).css('overflow-y') == 'auto';
 			});
 		}
 
